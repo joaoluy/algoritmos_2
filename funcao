@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+
+//Crie uma função que receba um valor e informe se ele é positivo ou não.
+
+//Crie uma função que receba um valor e diga se é nulo ou não.
+
+//Crie uma função que receba 2 números e exiba o maior valor.
+
+
+int posi(int x){
+    if(x > 0){
+        return 0;
+    } else if(x == 0){
+        return 1;
+    } else return 2;
+}
+
+bool nulo(int x){
+    if(x != 0){
+        return false;
+    } else return true;
+}
+
+int maior(int x, int y){
+    if(x > y){
+        return 0;
+    } else if(x < y){
+        return 1;
+    } else return 2;
+}
+
+int main(){
+    int x,y;
+    cout << "digite dois valores" << endl;
+    cin >> x;
+    cin >> y;
+    if(posi(x) == 0){
+        cout << x << " eh positivo" << endl;
+    }else if(posi(x) == 2) {
+        cout << x << " eh negativo" << endl;
+    }
+    if(nulo(x)){
+        cout << x << " eh nulo" << endl;
+    }else{
+        cout << x << " nao eh nulo" << endl;
+    }
+    if(posi(y) == 0){
+        cout << y << " eh positivo" << endl;
+    }else if(posi(y) == 2) {
+        cout << y << " eh negativo" << endl;
+    }
+    if(nulo(y)){
+        cout << y << " eh nulo" << endl;
+    }else{
+        cout << y << " nao eh nulo" << endl;
+    }
+    if(maior(x,y) == 0){
+        cout << x << " eh maior" << endl;
+    } else if(maior(x,y)== 1){
+        cout << y << " eh maior" << endl;
+    } else cout << "valores iguais";
+}
