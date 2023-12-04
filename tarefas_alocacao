@@ -1,0 +1,37 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+//1) Implemente um algoritmo que o usuário insere o tamanho do vetor
+//e que preenche esse vetor com números aleatórios usando a aritmética de ponteiros para percorrer o mesmo
+
+//2) Implemente um algoritmo que calcule a média dos elementos do vetor preenchido aleatoriamente do exercício anterior
+//usando a aritmética de ponteiros para percorrer o mesmo.
+
+
+
+int main(){
+    int *v, n;
+    float media = 0;
+    srand(time(NULL));
+    cin >> n;
+    if(!(v = new(nothrow)int[n])){
+        cout << "Falha na alocacao de memoria" << endl;
+        return 1;
+    }
+
+    for(int i=0; i < n; i++){
+        v[i] = rand()% 10;
+    }
+
+    int *u = &v[n - 1];
+
+    while(v <= u){
+        cout << *v << " ";
+        media += *v;
+        v++;
+    }
+    cout << "a media dos elementos eh: ";
+    cout << media/n;
+    return 0;
+}
