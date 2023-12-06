@@ -1,0 +1,20 @@
+#include <iostream>
+#include <stdlib.h>
+#include <ctime>
+using namespace std;
+
+
+int inserir(){
+    int aleat;
+    srand(time(NULL));
+    rand (% 10);
+    
+}
+int main(){
+    int *v, n;
+    if(!(v = new(nothrow) int[n])){
+        cout << "Falha na Alocacao de Memoria";
+        return -1;
+    }
+
+}
